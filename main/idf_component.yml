@@ -1,0 +1,7 @@
+dependencies:
+  LED:
+    git: https://github.com/AnchisaPhetnoi/ESP32-LED-Component.git
+    path: components/LED
+  SEVENSEGMENT:
+    git: https://github.com/AnchisaPhetnoi/Lab-07-Seven-segment-Component-develope.git
+    path: components/SevenSegment
