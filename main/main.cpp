@@ -7,15 +7,22 @@ SevenSegment s2(4);
 
 extern "C" void app_main(void)
 {
+    uint8_t counter = 0;
     while (1)
     {
-        for (int i = 0; i < 9; i++)
+        
         {
-            s1.DisplayNumber(i);
-            vTaskDelay(500 / portTICK_PERIOD_MS);
+            s1.DisplayNumber(counter/10);
+            s1.DisplayOn();
+            vTaskDelay(10 / portTICK_PERIOD_MS);
+            s1.DisplayOff();
 
-            s2.DisplayNumber((i+1) % 10);
-            vTaskDelay(500 / portTICK_PERIOD_MS);
+            s2.DisplayNumber(counter % 10);
+            s2.DisplayOn();
+            vTaskDelay(10 / portTICK_PERIOD_MS);
+            counter++;
+            if (counter > 99)
+                counter = 0;
         }
     }
 }

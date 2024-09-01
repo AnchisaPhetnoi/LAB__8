@@ -8,13 +8,13 @@ dependencies:
       type: git
     version: 37c785c3251593d554dfeee557d01159b8864081
   SEVENSEGMENT:
-    component_hash: fd3db2444badd38c1c1eec9adb86469f23241324c1dffd8f7a5148a4680410d8
+    component_hash: 34d496963ff37f0f5c3eabbdc2b907987e9c2715018e0334d11098fcaefd44ff
     dependencies: []
     source:
       git: https://github.com/AnchisaPhetnoi/Lab-07-Seven-segment-Component-develope.git
       path: components/SevenSegment
       type: git
-    version: fe62874f441be3b73b9656e778ae53f10a1dd156
+    version: 31565bf0249dd3d56fa2bc18de9008743b7e6089
   idf:
     source:
       type: idf

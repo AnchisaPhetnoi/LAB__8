@@ -1,6 +1,7 @@
 #include "LED.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
 class SevenSegment
 {
     int common_pin;
@@ -12,12 +13,57 @@ class SevenSegment
     LED seg_f = LED(21);
     LED seg_g = LED(22);
     LED common = LED(common_pin);
+
 public:
     SevenSegment(int pin)
     {
         common_pin = pin;
         common = LED(common_pin);
-    } 
+    }
     void HardwareTest();
     void DisplayBlank();
+    void DisplayNumber(int number);
+    void DisplayNum0();
+    void DisplayNum1();
+    void DisplayNum2();
+    void DisplayNum3();
+    void DisplayNum4();
+    void DisplayNum5();
+    void DisplayNum6();
+    void DisplayNum7();
+    void DisplayNum8();
+    void DisplayNum9();
+    void DisplayOff();
+    void DisplayOn();
+  
 };
+void SevenSegment::HardwareTest()
+{
+    common.ON();
+    seg_a.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+    seg_b.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+    seg_c.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+    seg_d.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+    seg_e.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+    seg_f.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+    seg_g.ON();
+    vTaskDelay(500/portTICK_PERIOD_MS);
+}
+
+void SevenSegment::DisplayBlank()
+{
+    
+    seg_a.OFF();
+    seg_b.OFF();
+    seg_c.OFF();
+    seg_d.OFF();
+    seg_e.OFF();
+    seg_f.OFF();
+    seg_g.OFF();
+}
